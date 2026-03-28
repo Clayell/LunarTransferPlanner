@@ -1,3 +1,5 @@
+![Toolbar Icon](https://github.com/Clayell/TargetInterceptPlanner/blob/master/GameData/TargetInterceptPlanner/PluginData/ToolbarIcons/button-64.png)
+
 [![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/Clayell/TargetInterceptPlanner/latest/total?label=downloads%20(latest))](https://github.com/Clayell/TargetInterceptPlanner/releases/latest)
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Clayell/TargetInterceptPlanner/total?label=downloads%20(total))](https://github.com/Clayell/TargetInterceptPlanner/releases)
 
