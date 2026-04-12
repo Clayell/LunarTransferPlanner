@@ -175,6 +175,7 @@ namespace TargetInterceptPlanner
         float windowWidth;
         //float UIScale; // TODO, can't think of a great way to make this look good right now
         GUISkin skin;
+        GUIStyle lineStyle = new GUIStyle();
         Texture2D gearWhite;
         Texture2D gearGreen;
         Texture2D resetWhite;
@@ -344,6 +345,11 @@ namespace TargetInterceptPlanner
             skin.box.margin = new RectOffset(1, 1, 1, 1);
             skin.textField.margin = new RectOffset(3, 1, 1, 1); // TODO, make left and right uniform
             skin.textField.padding = new RectOffset(4, 2, 1, 0); // TODO, make left and right uniform
+
+            lineStyle.normal.background = Texture2D.whiteTexture;
+            lineStyle.padding = new RectOffset(0, 0, 0, 0);
+            lineStyle.margin = new RectOffset(0, 0, 0, 0);
+            lineStyle.border = new RectOffset(0, 0, 0, 0);
 
             // white: (255, 255, 255) | green: (183, 255, 0) | 16x16
 
@@ -2491,11 +2497,6 @@ namespace TargetInterceptPlanner
         private void DrawLine() // use this in the main window? TODO
         {
             GUILayout.Space(10);
-            GUIStyle lineStyle = new GUIStyle();
-            lineStyle.normal.background = Texture2D.whiteTexture;
-            lineStyle.padding = new RectOffset(0, 0, 0, 0);
-            lineStyle.margin = new RectOffset(0, 0, 0, 0);
-            lineStyle.border = new RectOffset(0, 0, 0, 0);
             GUILayout.Box("", lineStyle, GUILayout.Height(2), GUILayout.ExpandWidth(true));
             GUILayout.Space(10);
         }
@@ -2685,6 +2686,8 @@ namespace TargetInterceptPlanner
             //TIPProfiler.Begin();
 
             //Stopwatch stopwatch = Stopwatch.StartNew();
+
+            // TODO: stop calculations when paused (FlightDriver.Pause)
 
             using (TIPProfiler.Auto()) // this gets ignored if not building with the profiler
             {
