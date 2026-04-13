@@ -1,5 +1,7 @@
 The MIT License (MIT)
 
+Copyright (c) 2023, Martin Reverda (Nazfib) for TWP2 Renderer
+
 Copyright (c) 2022 - 2025, RCrockford
 
 Copyright (c) 2026, Clayel (Clayell)
