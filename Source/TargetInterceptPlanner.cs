@@ -175,7 +175,8 @@ namespace TargetInterceptPlanner
         float windowWidth;
         //float UIScale; // TODO, can't think of a great way to make this look good right now
         GUISkin skin;
-        GUIStyle lineStyle = new GUIStyle();
+        GUIStyle lineStyle;
+        GUIStyle buttonStyle;
         Texture2D gearWhite;
         Texture2D gearGreen;
         Texture2D resetWhite;
@@ -346,11 +347,6 @@ namespace TargetInterceptPlanner
             skin.textField.margin = new RectOffset(3, 1, 1, 1); // TODO, make left and right uniform
             skin.textField.padding = new RectOffset(4, 2, 1, 0); // TODO, make left and right uniform
 
-            lineStyle.normal.background = Texture2D.whiteTexture;
-            lineStyle.padding = new RectOffset(0, 0, 0, 0);
-            lineStyle.margin = new RectOffset(0, 0, 0, 0);
-            lineStyle.border = new RectOffset(0, 0, 0, 0);
-
             // white: (255, 255, 255) | green: (183, 255, 0) | 16x16
 
             Texture2D LoadImage(string url)
@@ -469,6 +465,21 @@ namespace TargetInterceptPlanner
 
         void OnGUI()
         {
+            if (lineStyle == null)
+            {
+                lineStyle = new GUIStyle();
+                lineStyle.normal.background = Texture2D.whiteTexture;
+                lineStyle.padding = new RectOffset(0, 0, 0, 0);
+                lineStyle.margin = new RectOffset(0, 0, 0, 0);
+                lineStyle.border = new RectOffset(0, 0, 0, 0);
+            }
+
+            if (buttonStyle == null)
+            {
+                buttonStyle = new GUIStyle(GUI.skin.button);
+                buttonStyle.padding = new RectOffset(0, 0, 0, 0);
+            }
+
             if (isWindowOpen && isKSPGUIActive && !isLoading && !isBadUI)
             {
                 GUI.skin = !useAltSkin ? skin : null;
@@ -2614,7 +2625,7 @@ namespace TargetInterceptPlanner
             if (pushDown) GUILayout.Space(5);
             if (gearWhite != null && gearGreen != null)
             {
-                if (GUILayout.Button(new GUIContent(useAltSkin ? gearWhite : gearGreen, tooltip), new GUIStyle(GUI.skin.button) { padding = new RectOffset(0, 0, 0, 0) }, GUILayout.Width(20), GUILayout.Height(20))) button = !button;
+                if (GUILayout.Button(new GUIContent(useAltSkin ? gearWhite : gearGreen, tooltip), buttonStyle, GUILayout.Width(20), GUILayout.Height(20))) button = !button;
                 // remove padding in style to prevent image getting scaled down with unity skin
             }
             else

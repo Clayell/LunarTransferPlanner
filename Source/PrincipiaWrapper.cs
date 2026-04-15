@@ -12,7 +12,7 @@ namespace TargetInterceptPlanner
             {
                 try
                 {
-                    if (assembly.assembly.GetName().Name == "principia.ksp_plugin_adapter")
+                    if (assembly.name.Equals("principia.ksp_plugin_adapter", StringComparison.OrdinalIgnoreCase))
                     {
                         Log($"Principia found.");
                         return true;

@@ -80,6 +80,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AssemblyVersion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Source\HarmonyPatches.cs" />
     <Compile Include="Source\KACWrapper.cs" />
     <Compile Include="Source\TargetInterceptPlanner.cs" />
     <Compile Include="Source\PrincipiaWrapper.cs" />
@@ -118,8 +119,8 @@
 		xcopy /y /i "$(TargetPath)" "$(KSPRoot)\GameData\TargetInterceptPlanner\Plugins\"
 		xcopy /y /i "$(TargetDir)$(TargetName).pdb" "$(KSPRoot)\GameData\TargetInterceptPlanner\Plugins\"
 
-		xcopy /y /i "$(TargetPath)" "C:\Users\Clayel\KSP Instances\Kerbal Space Program 1\KSP (1.12.5 STOCKALIKE)\GameData\TargetInterceptPlanner\Plugins\"
-		xcopy /y /i "$(TargetDir)$(TargetName).pdb" "C:\Users\Clayel\KSP Instances\Kerbal Space Program 1\KSP (1.12.5 STOCKALIKE)\GameData\TargetInterceptPlanner\Plugins\"
+		xcopy /y /i "$(TargetPath)" "$(KSPSTOCK)\GameData\TargetInterceptPlanner\Plugins\"
+		xcopy /y /i "$(TargetDir)$(TargetName).pdb" "$(KSPSTOCK)\GameData\TargetInterceptPlanner\Plugins\"
 	</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
@@ -128,7 +129,7 @@
 
 		xcopy /y /i "$(TargetPath)" "$(KSPRoot)\GameData\TargetInterceptPlanner\Plugins\"
 
-		xcopy /y /i "$(TargetPath)" "C:\Users\Clayel\KSP Instances\Kerbal Space Program 1\KSP (1.12.5 STOCKALIKE)\GameData\TargetInterceptPlanner\Plugins\"
+		xcopy /y /i "$(TargetPath)" "$(KSPSTOCK)\GameData\TargetInterceptPlanner\Plugins\"
 	</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseWithLogs|AnyCPU'">
@@ -137,7 +138,7 @@
 
 		  xcopy /y /i "$(TargetPath)" "$(KSPRoot)\GameData\TargetInterceptPlanner\Plugins\"
 
-		  xcopy /y /i "$(TargetPath)" "C:\Users\Clayel\KSP Instances\Kerbal Space Program 1\KSP (1.12.5 STOCKALIKE)\GameData\TargetInterceptPlanner\Plugins\"
+		  xcopy /y /i "$(TargetPath)" "$(KSPSTOCK)\GameData\TargetInterceptPlanner\Plugins\"
 	  </PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
