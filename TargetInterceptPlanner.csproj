@@ -75,6 +75,15 @@
     <Reference Include="$(KSPRoot)\GameData\001_ToolbarControl\Plugins\ToolbarControl.dll" />
   </ItemGroup>
   <ItemGroup>
+	<PackageReference Include="Krafs.Publicizer" Version="2.3.0">
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		<PrivateAssets>all</PrivateAssets>
+	</PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+	<Publicize Include="Assembly-CSharp" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Properties\AssemblyVersion.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

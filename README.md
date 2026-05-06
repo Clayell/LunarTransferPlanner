@@ -38,11 +38,13 @@ Keep in mind that this mod currently assumes you can instantly get into the park
 
 Note: As the orbital period of the target approaches the sidereal day length of the planet, the time to the next window approaches infinity. It is impossible to find a launch window for a target in a synchronous orbit using this tool. Sorry!
 
+## Links
+
 Forum Thread: https://forum.kerbalspaceprogram.com/topic/229514-1000-target-intercept-planner-tip/
 
 SpaceDock: https://spacedock.info/mod/4101/Target%20Intercept%20Planner
 
-Source Code: https://github.com/Clayell/TargetInterceptPlanner
+Source Code: https://github.com/Clayell/TargetInterceptPlanner/tree/master/Source
 
 Wiki: https://github.com/Clayell/TargetInterceptPlanner/wiki
 
@@ -60,18 +62,18 @@ Wiki: https://github.com/Clayell/TargetInterceptPlanner/wiki
 * Principia (although not perfectly accurate due to n-body stuff)
 * Any celestial body from any solar system (including satellites of moons, and technically even from the surface of stars)
 
-## Authors
+## Authors:
 * [Clayel](https://github.com/Clayell) (current author of Target Intercept Planner)
 * [RCrockford](https://github.com/RCrockford) (author of original Lunar Transfer Planner)
 
-## Special Thanks To
+## Special Thanks To:
 * [Nazfib](https://github.com/Nazfib) ([Southern Latitude fix](https://github.com/KSP-RO/LunarTransferPlanner/pull/8) and Orbit/Angle Renderer from [TWP2](https://github.com/Nazfib/TransferWindowPlanner2))
 * test_account ([Delta-V and phasing time calculations](https://github.com/KSP-RO/LunarTransferPlanner/pull/3))
 * [siimav](https://github.com/siimav) ([Tooltips from RP-1](https://github.com/KSP-RO/RP-1/blob/master/Source/RP0/UI/Tooltip.cs))
 * [TriggerAu](https://github.com/TriggerAu) ([KAC Wrapper](https://github.com/TriggerAu/KerbalAlarmClock/blob/master/KerbalAlarmClock/API/KACWrapper.cs))
 
-## License
-The code is subject to the MIT license. (see [LICENSE.md](https://github.com/Clayell/TargetInterceptPlanner/blob/master/LICENSE.md))
+## License:
+This mod is subject to the MIT license. (see [LICENSE.md](https://github.com/Clayell/TargetInterceptPlanner/blob/master/LICENSE.md))
 
 Video showing off TIP: https://www.youtube.com/watch?v=B-uJvo5ea3I
 

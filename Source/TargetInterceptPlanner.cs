@@ -65,7 +65,6 @@ namespace TargetInterceptPlanner
             {
                 return double.NaN;
             }
-
         }
 
         internal static double RoundCheck(double value, double tolerance)
